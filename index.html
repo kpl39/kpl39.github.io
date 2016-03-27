@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>  
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script> 
+	<script src="jquery-ui.js"></script> 
+	<script src="underscore.js"></script>
+	<script src="myscript.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="minimal.css">
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	
+	<title>Just do it</title>
+</head>
+<body id="start">
+	<div class="container">
+		<div  id="tabs">
+			<header> 
+				<img src="justDoIt.png" alt="Just Do It" class="col-12"> 
+				<nav>
+					<ul>
+						<li><a href="#addTask">Add Task</a></li>
+						<li ><a href="#toDoList">To Do List</a></li>
+						<li ><a href="#filter">Filter</a></li>
+						<li style="float:right"><input class="ui-button" value = "Save" type="button" onclick="savePage()"></li>
+						<li style="float:right"><input class="ui-button" value = "Load" type="button" onclick="loadPage()"></li>
+					</ul>
+				</nav>
+
+			</header>
+			<div id="addTask" class="col-12">
+				<div class="col-8">
+					<form>
+						<fieldset>   
+							<section>
+								<textarea autocomplete="on" id="taskText" class="ui-widget" rows="10" cols="60" placeholder="Type Your Task Here..." autofocus></textarea><br>
+								<input id="submit" class="ui-button" value = "Add New Item" type="button" onclick="takeTextAreaInput()">
+								<input id="submit" class="ui-button" value = "Clear Text" type="button" onclick="clearInput()">
+							</section>
+						</fieldset>
+					</form>
+				</div>
+				<div id="datepicker" class="col-4"></div>
+			</div>
+			<div id="toDoList" class="col-8">
+			</div>
+			<div id="filter" class="col-12">
+				<div id="filteredList" class="col-8"></div>
+				<div id="filteredDate" class="col-4">
+				<input id="submit" class="ui-button" value = "Filter" type="button" onclick="filterDate()">
+				<input id="submit" class="ui-button" value = "Reset" type="button" onclick="initializeFilter()">
+				</div>
+
+			</div>
+		</div>
+		<footer class="col-12 text-right">
+			<a href="#start">Back to start</a>
+		</footer>
+
+	</div>	
+</body>
+</html>
